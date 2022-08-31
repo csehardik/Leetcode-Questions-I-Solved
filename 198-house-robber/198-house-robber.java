@@ -2,12 +2,12 @@ class Solution {
     public int rob(int[] nums) {
         return maxMoney(nums,0,new HashMap<Integer,Integer>());
     }
-    private int maxMoney(int nums[] ,int currentHouse, HashMap<Integer,Integer>memo){
+    private int maxMoney(int nums[] , int currentHouse,HashMap<Integer,Integer>memo){
         
         if(currentHouse>=nums.length)
             return 0;
         
-        int currentKey=currentHouse;
+        int currentKey = currentHouse;
         
         if(memo.containsKey(currentKey))
             return memo.get(currentKey);
