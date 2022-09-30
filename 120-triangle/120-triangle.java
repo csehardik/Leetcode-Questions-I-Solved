@@ -1,3 +1,5 @@
+// bottom-up approach code
+
 class Solution {
     public int minimumTotal(List<List<Integer>> triangle) {
         int arr[] = new int[triangle.size()+1];
