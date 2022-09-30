@@ -6,8 +6,8 @@ class Solution {
     }
 public int minSum(List<List<Integer>> arr,int row,int j,HashMap<String,Integer>memo)  // [ here j = column ]
     {
-        if(row==arr.size()-1) 
-            return arr.get(row).get(j);
+        if(row==arr.size()-1) //if row == last row
+            return arr.get(row).get(j);//return value at column present at last row
     
     String currentKey = Integer.toString(row) + '-' + Integer.toString(j);
     
