@@ -52,7 +52,7 @@ class Solution {
             return memo[currentIndex][s];
         }
         
-        int consider = 101;
+        int consider = 0;
         if(currentIndex * currentIndex <= s){
             consider = 1 + minSquares(currentIndex, s - currentIndex*currentIndex, memo);
         }
