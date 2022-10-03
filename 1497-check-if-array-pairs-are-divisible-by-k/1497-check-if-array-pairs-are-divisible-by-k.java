@@ -26,7 +26,7 @@ int memo[] = new int[k]; // initial the array of size k (i.e k is the number by 
             
             if(i==0){ // in this we are checking that for 0th index the count should always be even
                 
-                if(memo[i]%2 !=0)   //checking count for oth index is even or not. we need to check this because if we have k=5 and first element of array as 5 so 5%k i.e 5%5 =                                       0(zero) . so b should have remainder k-a%k i.e 5-0=5 and that's not possible because we don;t have index 5 in the array.
+                if(memo[i]%2 !=0)   //checking count for oth index is even or not. we need to check this because if we have k=5 and first element of array as 5 so 5%k i.e 5%5 =                                       0(zero) . so b should have remainder k-a%k i.e 5-0=5 and that's not possible because we don't have index 5 in the array.
                     
                 return false;   //return false if frequency at zero index not even .
             
