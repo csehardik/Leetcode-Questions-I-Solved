@@ -1,26 +1,25 @@
 class Solution {
     public int fib(int n) {
-        return nthfib(n , new HashMap<Integer , Integer>());
-        
+        return nthFibo(n,new HashMap<Integer,Integer>());
     }
-    
-    private int nthfib(int n , HashMap<Integer , Integer> memo){
+    private int nthFibo(int n,HashMap<Integer,Integer>memo){
         
-        if(n==0)
+        if(n == 0)
             return 0;
         
         if(n==1)
             return 1;
         
-        int currentkey = n;
+        int currentKey = n;
         
-        if(memo.containsKey(n))
-            return memo.get(currentkey);
+        if(memo.containsKey(currentKey))
+            return memo.get(currentKey);
         
-        int a = nthfib(n-1,memo);
-        int b = nthfib(n-2,memo);
+        int a = nthFibo(n-1,memo);
+        int b = nthFibo(n-2,memo);
         
-        memo.put(currentkey , a+b);
-        return a+b;
+        memo.put(currentKey,a+b);
+        return memo.get(currentKey);
+        
     }
 }
