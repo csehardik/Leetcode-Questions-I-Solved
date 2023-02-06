@@ -26,40 +26,6 @@ class MaxLenZeroSumSub
 }
 // } Driver Code Ends
 
-
-// class GfG
-// {
-//     int maxLen(int arr[], int n)
-//     {
-        
-//         HashMap<Integer,Integer> memo = new HashMap<Integer,Integer>();
-        
-//         int prefixSum = 0;
-//         int answer=0;
-        
-//         memo.put(prefixSum,-1);
-        
-//         for(int currentNum:arr)
-//         {
-//             prefixSum = prefixSum+arr[currentNum];
-        
-//         if(memo.containsKey(prefixSum))
-//         {
-//             answer = Math.max(answer,currentNum-memo.get(prefixSum));
-//         }
-        
-//         else
-//         {
-//             memo.put(prefixSum,currentNum);
-//         }
-        
-//         }
-        
-//         return answer;
-//     }
-// }
-
-
 //Approach we Used :
 
 // in this hashMap has entry like [key = prefixSum & value = currentIndex]
