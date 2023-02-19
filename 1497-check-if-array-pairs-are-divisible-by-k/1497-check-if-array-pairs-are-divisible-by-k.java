@@ -1,13 +1,13 @@
 class Solution {
     public boolean canArrange(int[] arr, int k) {
+      
+        int memo[] = new int[k];
         
-        int  memo[] = new int[k];
-        
-        for(int currentNum:arr){
+        for(int currentNum : arr){
             
             int currentRemainder = ((currentNum%k)+k)%k;
             
-            memo[currentRemainder] += 1;
+            memo[currentRemainder]+=1;
             
         }
         
@@ -26,8 +26,7 @@ class Solution {
             }
         }
         return true;
+        
     }
 }
-
-
 
