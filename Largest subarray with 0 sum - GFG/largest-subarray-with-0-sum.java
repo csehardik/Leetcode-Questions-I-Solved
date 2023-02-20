@@ -31,7 +31,7 @@ class GfG
 {
     int maxLen(int arr[], int n)
     {
-        HashMap<Integer,Integer>memo = new HashMap<Integer,Integer>();
+        HashMap<Integer,Integer>memo =  new HashMap<Integer,Integer>();
         
         int prefixSum=0;
         int answer=0;
@@ -42,12 +42,12 @@ class GfG
             prefixSum+=arr[i];
             
             if(memo.containsKey(prefixSum)){
-                answer = Math.max(answer,i-memo.get(prefixSum));
+                answer=Math.max(answer,i-memo.get(prefixSum));
+            }
+            else{
+                memo.put(prefixSum,i);
+            }
         }
-        else{
-            memo.put(prefixSum,i);
-        }
+        return answer;
     }
-    return answer;
-}
 }
