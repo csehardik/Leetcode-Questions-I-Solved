@@ -1,4 +1,4 @@
-// In this array we need to check that is it possible to divide the array in pairs in the way that the pairs are divisible by k.
+        // In this array we need to check that is it possible to divide the array in pairs in the way that the pairs are divisible by k.
 
 // Imp Points : 
 // 1.remainder cannot be -ve (most important point to keep in mind)
