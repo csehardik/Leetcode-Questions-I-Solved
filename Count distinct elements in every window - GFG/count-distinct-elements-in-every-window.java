@@ -30,8 +30,6 @@ class GFG
 // } Driver Code Ends
 
 
-
-
 class Solution
 {
     ArrayList<Integer> countDistinct(int A[], int n, int k)
@@ -41,7 +39,7 @@ class Solution
         HashMap<Integer,Integer> memo = new HashMap<>(); //initialise a HASHMAP
         int distinct = 0; // initialise a variable DISTINCT = 0;//will help us to find count of distinct elements in every window of size k
         
-        for(int i=0;i<k;i++)//for acquiring k elements in the 1st window and we will go till k-1 because indexes are 0 based
+        for(int i=0;i<k;i++)//for acquiring k elements in the 1st window and we will go till k because indexes are 0 based
         {
             int currentVal = A[i]; //to check what is the value of current element//we will store the current element in the currentVal
             
@@ -88,3 +86,4 @@ class Solution
          return answer;// return the final answer
     }
 }
+
