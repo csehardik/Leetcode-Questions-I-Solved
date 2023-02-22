@@ -1,5 +1,6 @@
 class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
+     
         HashMap<Integer,Boolean> memo = new HashMap<Integer,Boolean>();
         ArrayList<Integer> answer = new ArrayList<Integer>();
         
@@ -8,19 +9,17 @@ class Solution {
                 memo.put(currentNum,true);
             }
         }
-            
-            for(int currentNum:nums2){
-                if(memo.containsKey(currentNum) && memo.get(currentNum)){
-                    answer.add(currentNum);
-                    memo.put(currentNum,false);
-                }
+        
+        for(int currentNum:nums2){
+            if(memo.containsKey(currentNum) && memo.get(currentNum)){
+                answer.add(currentNum);
+                memo.put(currentNum,false);
             }
-            
-            int result[] = new int[answer.size()];
-            for(int i=0;i<answer.size();i++){
-                result[i] = answer.get(i);
-            }
-            return result;
-            
         }
+        int result[] = new int[answer.size()];
+        for(int i=0;i<answer.size();i++){
+            result[i] = answer.get(i);
+        }
+        return result;
     }
+}
